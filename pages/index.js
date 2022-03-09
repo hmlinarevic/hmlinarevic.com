@@ -2,13 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import ReactMarkdown from 'react-markdown'
+
 import ArticleItem from '../components/article-item'
 import MyPhoto from '../components/my-photo'
 import SaveSvg from '../components/icons/save-svg'
 import GithubSvg from '../components/icons/github-svg'
 import HeroIcon from '../components/hero-icon'
 
-const Home = ({ data }) => {
+import { getArticlesData } from '../lib/articles'
+import '../lib/articles'
+
+export default function Home({ data, articles }) {
 	const imgUrl = data.profile_picture.data.attributes.url
 	const hostAddress = 'https://strapi.hmlinarevic.com'
 	const imgAddress = hostAddress + imgUrl
@@ -55,10 +59,9 @@ const Home = ({ data }) => {
 			<section className="mt-24">
 				<h2 className="text-3xl font-bold">Latest Articles</h2>
 				<hr className="mt-2 mb-4" />
-				<ArticleItem
-					title="Standing on the Shoulders of Giants"
-					date="14 Feb 2022"
-				/>
+				{articles.map(({ id, details }) => {
+					return <ArticleItem key={id} {...details} />
+				})}
 			</section>
 		</>
 	)
@@ -72,11 +75,12 @@ export async function getStaticProps() {
 	data = await res.json()
 	data = data.data.attributes
 
+	const articles = await getArticlesData()
+
 	return {
 		props: {
 			data,
+			articles,
 		},
 	}
 }
-
-export default Home
