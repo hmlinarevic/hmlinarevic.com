@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import clsx from 'clsx'
 
-import MyName from './my-name'
+import clsx from 'clsx'
 
 const NavItem = ({ className, children }) => {
 	const styles =
@@ -15,7 +14,9 @@ const Navigation = () => {
 			<ul className="flex justify-between items-center">
 				<Link href="/">
 					<a>
-						<MyName />
+						<span className="block text-xl font-normal">
+							<span className="text-[#619B60]">hrvoje</span> mlinarevic
+						</span>
 					</a>
 				</Link>
 				<div className="flex">
@@ -24,7 +25,7 @@ const Navigation = () => {
 							<NavItem className="mr-10">about me</NavItem>
 						</a>
 					</Link>
-					<Link href="/articles">
+					<Link href="/blog">
 						<a>
 							<NavItem className="mr-10">articles</NavItem>
 						</a>
