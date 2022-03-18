@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import Text from '../components/text'
+import Intro from '../components/intro'
 
 import { getJuliesData } from '../lib/cms/julie'
 import { DOMAIN } from '../utils/url/assets'
@@ -10,7 +11,7 @@ export default function Julie({ intros, photos }) {
 
   return (
     <>
-      <h1 className="text-4xl font-bold text-center mb-20">Julie</h1>
+      <Intro title="julie">The best dog on the planet</Intro>
 
       <div className="bg-neutral-100 border-r-2 rounded-xl pr-10 shadow-xl flex justify-between items-center">
         <Image
