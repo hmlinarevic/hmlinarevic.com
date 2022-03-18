@@ -3,4 +3,4 @@ module.exports = {
 	images: {
 		domains: ['strapi.hmlinarevic.com'],
 	},
-};
+}
