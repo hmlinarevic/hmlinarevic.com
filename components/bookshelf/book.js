@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { hostAddress } from '../../utils/hostAddress'
+import { DOMAIN } from '../../utils/url/assets'
 
 const Book = ({ name, author, coverUrl, url }) => {
 	return (
@@ -11,7 +11,7 @@ const Book = ({ name, author, coverUrl, url }) => {
 					<div className="w-full flex">
 						<div className="mr-4 h-[120px]">
 							<Image
-								src={hostAddress + coverUrl}
+								src={DOMAIN + coverUrl}
 								width={80}
 								height={120}
 								objectFit="fill"
