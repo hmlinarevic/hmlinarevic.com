@@ -3,7 +3,6 @@ export default function Intro({ title, children }) {
     <>
       <section className="text-center mb-20 ">
         <h1 className="text-4xl font-bold mb-4">
-          {/* <span className="text-neutral-700">{title[0]}</span> */}
           {title[0].toUpperCase()}
           {title.slice(1)}
         </h1>
