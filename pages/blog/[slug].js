@@ -34,7 +34,7 @@ export default function Article({ articleData }) {
       </span>
       <h1 className="text-4xl font-bold text-center">{title}</h1>
       <hr className="w-[120px] my-10 mx-auto" />
-      <Text className="font-sans text-lg" data={content} />
+      <Text className="font-serif text-lg leading-relaxed" data={content} />
     </>
   )
 }
