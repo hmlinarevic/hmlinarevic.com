@@ -1,61 +1,62 @@
 import Image from 'next/image'
 
-import Text from '../components/text'
-import Intro from '../components/intro'
-
 import { getJuliesData } from '../lib/cms/julie'
+
 import { DOMAIN } from '../utils/url/assets'
 
-export default function Julie({ intros, photos }) {
+export default function Julie({ photos }) {
   const juliesPhotos = photos.map((photo) => DOMAIN + photo.attributes.url)
 
   return (
-    <>
-      <Intro title="julie">The best dog on the planet</Intro>
+    <section>
+      <div className="grid grid-cols-2 grid-rows-2 gap-x-10">
+        <div className="relative h-[280px] w-[280px] justify-self-end">
+          <Image
+            className="rounded-sm"
+            src={juliesPhotos[0]}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
 
-      <div className="bg-neutral-100 border-r-2 rounded-xl pr-10 shadow-xl flex justify-between items-center">
-        <Image
-          className="rounded-l-xl"
-          src={juliesPhotos[0]}
-          width={300}
-          height={300}
-          objectFit="cover"
-        />
+        <div className="self-center">
+          <h2 className="mb-2 text-4xl font-bold">Julie</h2>
+          <p className="text-xl">
+            the best dog on the world, <br />
+            loves to drive around, <br />
+            and sleep on her couch.
+          </p>
+        </div>
 
-        <Text className="basis-80 text-lg leading-relaxed" data={intros[0]} />
+        <div className="self-end">
+          <Image
+            className="rounded-sm"
+            src={juliesPhotos[2]}
+            width={300}
+            height={220}
+            objectFit="cover"
+          />
+        </div>
+
+        <div className="mb-8 inline-block h-[220px] w-[300px]">
+          <Image
+            className="rounded-sm"
+            src={juliesPhotos[1]}
+            width={300}
+            height={220}
+            objectFit="cover"
+          />
+        </div>
       </div>
-
-      <div className="bg-neutral-100 border-l-2 rounded-xl pl-10 my-12 shadow-xl flex justify-between items-center">
-        <Text className="basis-80 text-lg leading-relaxed" data={intros[1]} />
-        <Image
-          className="rounded-r-xl"
-          src={juliesPhotos[1]}
-          width={300}
-          height={220}
-          objectFit="cover"
-        />
-      </div>
-
-      <div className="bg-neutral-100  border-r-2 rounded-xl pr-10 shadow-xl flex justify-between items-center">
-        <Image
-          className="rounded-l-xl"
-          src={juliesPhotos[2]}
-          width={300}
-          height={220}
-          objectFit="cover"
-        />
-        <Text className="basis-80 text-lg leading-relaxed" data={intros[2]} />
-      </div>
-    </>
+    </section>
   )
 }
 
 export async function getStaticProps() {
-  const { intros, photos } = await getJuliesData()
+  const { photos } = await getJuliesData()
 
   return {
     props: {
-      intros,
       photos,
     },
   }
