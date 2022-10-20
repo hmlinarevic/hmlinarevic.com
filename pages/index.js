@@ -4,8 +4,8 @@ import ReactMarkdown from 'react-markdown'
 
 import Section from '../components/layout/section'
 import Hero from '../components/layout/hero'
-import ArticleList from '../components/article/article-list'
-import ProjectLink from '../components/projects/project-link'
+import ArticleItem from '../components/article-item'
+import ProjectLink from '../components/project-link'
 
 import { getMyData } from '../lib/cms/me'
 import { getSiteData } from '../lib/cms/site'
@@ -23,11 +23,15 @@ export default function Home({ me, site, articles }) {
       </Section>
 
       <Section title="Projects">
-        <ProjectLink url="https://www.crosswit.io" />
+        <ProjectLink url="https://www.crosswit.io" label="crosswit" />
       </Section>
 
       <Section title="Latest Articles">
-        <ArticleList data={articles} />
+        <ul>
+          {articles.map(({ id, details }) => (
+            <ArticleItem key={id} {...details} />
+          ))}
+        </ul>
       </Section>
     </>
   )
