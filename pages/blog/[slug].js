@@ -1,7 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 
-import Date from '../../components/date'
-import Text from '../../components/text'
+import { parseISO, format } from 'date-fns'
 
 import { getAllArticleSlugs, getArticleData } from '../../lib/cms/articles'
 
@@ -25,16 +24,21 @@ export const getStaticProps = async ({ params }) => {
 
 export default function Article({ articleData }) {
   const { content, title, publishedAt } = articleData.attributes
-  console.log(articleData)
+
+  const date = parseISO(publishedAt)
+
   return (
     <>
-      <span className="font-light block text-center mb-4">
+      <span className="mb-4 block text-center font-light">
         Written by <span className="font-bold">Hrvoje Mlinarevic</span> on{' '}
-        <Date dateString={publishedAt} formatString="LLLL d, yyyy" />
+        <time dateTime={publishedAt}>{format(date, 'LLLL d, yyyy')}</time>
       </span>
-      <h1 className="text-4xl font-bold text-center">{title}</h1>
-      <hr className="w-[120px] my-10 mx-auto" />
-      <Text className="font-serif text-lg leading-relaxed" data={content} />
+      <h1 className="text-center text-4xl font-bold">{title}</h1>
+      <hr className="my-10 mx-auto w-[120px] border-black border-opacity-20" />
+      <ReactMarkdown
+        className="font-serif text-lg leading-relaxed"
+        children={content}
+      />
     </>
   )
 }
