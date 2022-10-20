@@ -4,9 +4,20 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        black: '#2e3440',
+        night: '#4c566a',
+        white: '#eceff4',
+        orange: '#d08770',
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
+    },
+
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
+      sans: ['Inter', 'sans-serif'],
       serif: ['IBM Plex Serif', 'serif'],
     },
   },
