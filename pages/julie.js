@@ -22,7 +22,7 @@ export default function Julie({ photos }) {
         <div className="self-center">
           <h2 className="mb-2 text-4xl font-bold">Julie</h2>
           <p className="text-xl">
-            the best dog on the world, <br />
+            the best dog in the world, <br />
             loves to drive around, <br />
             and sleep on her couch.
           </p>
