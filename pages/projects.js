@@ -1,8 +1,8 @@
-import Section from '../components/section'
+import Section from '../components/layout/section'
 
 const Tag = ({ children }) => {
   return (
-    <span className="mr-2 rounded-3xl bg-snow bg-opacity-100 py-1 px-4 text-sm text-black">
+    <span className="mr-2 rounded-3xl bg-night bg-opacity-20 py-1 px-4 text-sm text-night">
       {children}
     </span>
   )
@@ -22,12 +22,13 @@ export default function Projects() {
           <Tag>puzzle</Tag>
         </div>
         <p className="mt-6 text-lg">
-          Being a hybrid between a memory game and a word search puzzle crosswit
-          is designed around the idea of improving cognitive functioning.
+          Being a hybrid between a memory game and a word search puzzle,
+          crosswit is designed around the idea of improving cognitive
+          functioning.
         </p>
         <p className="mt-6 text-lg">
-          Two aspects of the game - memorizing and searching for words - could
-          improve your short term memory, focus and concentration.
+          Two aspects of the game - memorizing and searching for words - may
+          improve your <br /> short term memory, focus and concentration.
         </p>
         <p className="mt-6 text-lg">
           Try it out,{' '}
