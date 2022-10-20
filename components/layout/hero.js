@@ -16,41 +16,41 @@ export default function Hero({ imgUrl }) {
         </h1>
         {/* subheading */}
         <p className="w-[320px] text-xl font-normal leading-relaxed">
-          I like to <span className="text-orange font-bold">build</span>{' '}
+          I like to <span className="font-bold text-orange">build</span>{' '}
           intuitive web apps and{' '}
-          <span className="text-orange font-bold">design</span> algorithms. When
+          <span className="font-bold text-orange">design</span> algorithms. When
           I'm not at my computer, I'm most likely on a walk with{' '}
           <Link href="/julie">
-            <a className="decoration-orange hover:bg-orange underline decoration-2 underline-offset-2 hover:text-white">
+            <a className="underline decoration-orange decoration-2 underline-offset-2 hover:bg-orange hover:text-white">
               Julie
             </a>
           </Link>
           .
         </p>
         {/* icons */}
-        <div className="mt-5 ml-[-0.5rem] flex w-[268px] justify-between">
+        <div className="mt-3 flex w-fit border-black">
           {/* icon - more about me */}
-          <Link href="/me">
-            <a>
-              <div className="flex p-2">
-                <SaveSvg />
-                <span className="ml-2 text-neutral-400 hover:text-black">
+          <div className="flex items-center">
+            <SaveSvg />
+            <Link href="/me">
+              <a>
+                <span className="ml-2 text-sm text-neutral-400 hover:text-black">
                   More about me
                 </span>
-              </div>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </div>
           {/* icon - github */}
-          <Link href="https://github.com/hmlinarevic">
-            <a target="_blank">
-              <div className="flex p-2">
-                <GithubSvg />
-                <span className="ml-2 text-neutral-400 hover:text-black">
+          <div className="ml-4 flex items-center p-2">
+            <GithubSvg />
+            <Link href="https://github.com/hmlinarevic">
+              <a className="inline-block" target="_blank">
+                <span className="ml-2 text-sm text-neutral-400 hover:text-black">
                   Github
                 </span>
-              </div>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
 
