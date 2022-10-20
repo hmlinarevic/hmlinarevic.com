@@ -1,42 +1,54 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import SaveSvg from './icons/save-svg'
-import GithubSvg from './icons/github-svg'
-import HeroIcon from './hero-icon'
+import SaveSvg from '../icons/save-svg'
+import GithubSvg from '../icons/github-svg'
 
-import { DOMAIN } from '../utils/url/assets'
+import { DOMAIN } from '../../utils/url/assets'
 
 export default function Hero({ imgUrl }) {
   return (
     <div className="flex justify-between">
       <div>
-        <h1 className="text-5xl font-bold leading-tight mb-5">
+        {/* heading */}
+        <h1 className="mb-5 text-5xl font-bold leading-tight">
           Hey, I'm Hrvoje.
         </h1>
-
-        <p className="w-[340px] font-serif font-normal text-xl leading-relaxed">
-          I like to <span className="text-[#619B60] font-bold">build</span>{' '}
+        {/* subheading */}
+        <p className="w-[320px] text-xl font-normal leading-relaxed">
+          I like to <span className="text-orange font-bold">build</span>{' '}
           intuitive web apps and{' '}
-          <span className="text-[#619B60] font-bold">design</span> algorithms.
-          When I'm not at my computer, I'm most likely on a walk with{' '}
+          <span className="text-orange font-bold">design</span> algorithms. When
+          I'm not at my computer, I'm most likely on a walk with{' '}
           <Link href="/julie">
-            <a className="underline decoration-[#619B60] underline-offset-2 hover:bg-[#619B60] hover:text-[#fff]">
+            <a className="decoration-orange hover:bg-orange underline decoration-2 underline-offset-2 hover:text-white">
               Julie
             </a>
           </Link>
           .
         </p>
-
-        <div className="w-[268px] mt-5 ml-[-0.5rem] flex justify-between">
+        {/* icons */}
+        <div className="mt-5 ml-[-0.5rem] flex w-[268px] justify-between">
+          {/* icon - more about me */}
           <Link href="/me">
             <a>
-              <HeroIcon icon={<SaveSvg />} name="More about me" />
+              <div className="flex p-2">
+                <SaveSvg />
+                <span className="ml-2 text-neutral-400 hover:text-black">
+                  More about me
+                </span>
+              </div>
             </a>
           </Link>
+          {/* icon - github */}
           <Link href="https://github.com/hmlinarevic">
             <a target="_blank">
-              <HeroIcon icon={<GithubSvg />} name="GitHub" />
+              <div className="flex p-2">
+                <GithubSvg />
+                <span className="ml-2 text-neutral-400 hover:text-black">
+                  Github
+                </span>
+              </div>
             </a>
           </Link>
         </div>
@@ -44,10 +56,10 @@ export default function Hero({ imgUrl }) {
 
       <Image
         src={DOMAIN + imgUrl}
-        alt="a guy"
+        alt="me outside in the park posterised in orange tones"
         objectFit="cover"
-        width={320}
-        height={320}
+        width={300}
+        height={340}
       />
     </div>
   )
