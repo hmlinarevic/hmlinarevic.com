@@ -14,6 +14,7 @@ export default function ProjectLink({ url, label }) {
       onMouseEnter={handleUserHovering}
       onMouseLeave={handleUserHovering}
       href={url}
+      target="_blank"
       className="block"
     >
       <div className="ml-[-20px] flex w-[calc(100%+40px)] cursor-pointer items-center justify-between rounded-xl py-[10px] px-[20px] transition hover:bg-orange hover:text-white">
