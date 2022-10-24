@@ -22,7 +22,7 @@ export default function ProjectLink({ url, label }) {
           <span className={isUserHovering ? 'animate-spin-slow' : ''}>
             <HexagonSvg />
           </span>
-          <span className="ml-2 inline text-lg">{label}</span>
+          <span className="ml-3 inline text-lg">{label}</span>
         </div>
       </div>
     </a>
