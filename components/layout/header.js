@@ -7,26 +7,26 @@ export default function Header() {
         <nav className="w-full text-white">
           <ul className="flex items-center justify-between">
             <Link href="/">
-              <a>
-                <span className="block text-xl font-normal">
-                  <span className="text-orange">hrvoje</span> mlinarevic
-                </span>
-              </a>
+
+              <span className="block text-xl font-normal">
+                <span className="text-orange">hrvoje</span> mlinarevic
+              </span>
+
             </Link>
             <div className="flex">
               <li className="mr-10  text-[1rem]">
-                <Link href="/me">
-                  <a className="cursor-pointer p-2">about me</a>
+                <Link href="/me" className="cursor-pointer p-2">
+                  about me
                 </Link>
               </li>
               <li className="mr-10  text-[1rem]">
-                <Link href="/blog">
-                  <a className="cursor-pointer p-2">articles</a>
+                <Link href="/blog" className="cursor-pointer p-2">
+                  articles
                 </Link>
               </li>
               <li className=" text-[1rem]">
-                <Link href="/projects">
-                  <a className="cursor-pointer p-2">projects</a>
+                <Link href="/projects" className="cursor-pointer p-2">
+                  projects
                 </Link>
               </li>
             </div>
@@ -34,5 +34,5 @@ export default function Header() {
         </nav>
       </div>
     </header>
-  )
+  );
 }

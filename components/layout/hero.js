@@ -20,10 +20,11 @@ export default function Hero({ imgUrl }) {
           intuitive web apps and{' '}
           <span className="font-bold text-orange">design</span> algorithms. When
           I'm not at my computer, I'm most likely on a walk with{' '}
-          <Link href="/julie">
-            <a className="underline decoration-orange decoration-2 underline-offset-2 hover:bg-orange hover:text-white">
-              Julie
-            </a>
+          <Link
+            href="/julie"
+            className="underline decoration-orange decoration-2 underline-offset-2 hover:bg-orange hover:text-white"
+          >
+            Julie
           </Link>
           .
         </p>
@@ -33,22 +34,22 @@ export default function Hero({ imgUrl }) {
           <div className="flex items-center">
             <SaveSvg />
             <Link href="/me">
-              <a>
-                <span className="ml-2 text-sm text-neutral-400 hover:text-black">
-                  More about me
-                </span>
-              </a>
+              <span className="ml-2 text-sm text-neutral-400 hover:text-black">
+                More about me
+              </span>
             </Link>
           </div>
           {/* icon - github */}
           <div className="ml-4 flex items-center p-2">
             <GithubSvg />
-            <Link href="https://github.com/hmlinarevic">
-              <a className="inline-block" target="_blank">
-                <span className="ml-2 text-sm text-neutral-400 hover:text-black">
-                  Github
-                </span>
-              </a>
+            <Link
+              href="https://github.com/hmlinarevic"
+              className="inline-block"
+              target="_blank"
+            >
+              <span className="ml-2 text-sm text-neutral-400 hover:text-black">
+                Github
+              </span>
             </Link>
           </div>
         </div>
@@ -57,7 +58,6 @@ export default function Hero({ imgUrl }) {
       <Image
         src={DOMAIN + imgUrl}
         alt="me outside in the park posterised in orange tones"
-        objectFit="cover"
         width={300}
         height={340}
       />

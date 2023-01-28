@@ -13,15 +13,17 @@ const Me = ({ about }) => {
 
       <p className="mt-5 text-lg leading-relaxed">
         If you want to know more, check out this{' '}
-        <Link href="/blog/shoulders-of-giants">
-          <a className="underline decoration-orange decoration-2 underline-offset-2 hover:bg-orange hover:text-white">
+        <Link
+          href="/blog/shoulders-of-giants"
+          className="underline decoration-orange decoration-2 underline-offset-2 hover:bg-orange hover:text-white">
+          
             article
-          </a>
+          
         </Link>
         .
       </p>
     </Section>
-  )
+  );
 }
 
 export default Me
