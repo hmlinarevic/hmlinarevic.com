@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { nanoid } from 'nanoid'
-import Tag from './Tag'
+import Tag from './tag'
 
 export default function ProjectDetails({
   className,
