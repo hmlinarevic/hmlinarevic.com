@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import Link from 'next/link'
 
 import SaveSvg from '../icons/save-svg'
@@ -59,7 +59,8 @@ export default function Hero({ imgUrl }) {
         src={DOMAIN + imgUrl}
         alt="me outside in the park posterised in orange tones"
         width={300}
-        height={340}
+        height={320}
+        style={{ height: '320px', objectFit: 'cover', borderRadius: '4px' }}
       />
     </div>
   )
