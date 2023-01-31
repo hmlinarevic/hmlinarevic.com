@@ -15,6 +15,7 @@ export default function ProjectLink({ url, label }) {
       href={url}
       target="_blank"
       className="block"
+      rel="noreferrer"
     >
       <div className="ml-[-20px] flex w-[calc(100%+40px)] cursor-pointer items-center justify-between rounded-xl py-[10px] px-[20px] transition hover:bg-orange hover:text-white">
         <div className="flex items-center">

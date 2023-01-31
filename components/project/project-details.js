@@ -37,6 +37,7 @@ export default function ProjectDetails({
           className="underline decoration-orange decoration-2 underline-offset-2 hover:bg-orange hover:text-white hover:no-underline"
           href={link.href}
           target="_blank"
+          rel="noreferrer"
         >
           {link.name}
         </a>

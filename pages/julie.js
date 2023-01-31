@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image'
 
 import { getJuliesData } from '../lib/cms/julie'
 
@@ -13,6 +13,7 @@ export default function Julie({ photos }) {
         <div className="relative h-[280px] w-[280px] justify-self-end">
           <Image
             className="rounded-sm"
+            alt="white labrador dog on the lovely cut grass with nice flowers"
             src={juliesPhotos[0]}
             layout="fill"
             objectFit="cover"
@@ -31,6 +32,7 @@ export default function Julie({ photos }) {
         <div className="self-end">
           <Image
             className="rounded-sm"
+            alt="white labrador dog sleeping on the couch"
             src={juliesPhotos[2]}
             width={300}
             height={220}
@@ -41,6 +43,7 @@ export default function Julie({ photos }) {
         <div className="mb-8 inline-block h-[220px] w-[300px]">
           <Image
             className="rounded-sm"
+            alt="white labrador dog in the car seat"
             src={juliesPhotos[1]}
             width={300}
             height={220}

@@ -35,10 +35,9 @@ export default function Article({ articleData }) {
       </span>
       <h1 className="text-center text-4xl font-bold">{title}</h1>
       <hr className="my-10 mx-auto w-[120px] border-black border-opacity-20" />
-      <ReactMarkdown
-        className="font-serif text-lg leading-relaxed"
-        children={content}
-      />
+      <ReactMarkdown className="font-serif text-lg leading-relaxed">
+        {content}
+      </ReactMarkdown>
     </>
   )
 }

@@ -19,7 +19,7 @@ export default function Home({ me, site, articles }) {
       </Section>
 
       <Section title="A Bit About the Site">
-        <ReactMarkdown className="text-lg" children={site.about} />
+        <ReactMarkdown className="text-lg">{site.about}</ReactMarkdown>
       </Section>
 
       <Section title="Projects">
