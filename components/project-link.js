@@ -1,18 +1,17 @@
 import { useState } from 'react'
-
-import HexagonSvg from './icons/hexagon-svg'
+import BoxSvg from './icons/box-svg'
 
 export default function ProjectLink({ url, label }) {
   const [isUserHovering, setIsUserHovering] = useState(false)
 
-  const handleUserHovering = () => {
+  const handleHover = () => {
     setIsUserHovering((prevState) => !prevState)
   }
 
   return (
     <a
-      onMouseEnter={handleUserHovering}
-      onMouseLeave={handleUserHovering}
+      onMouseEnter={handleHover}
+      onMouseLeave={handleHover}
       href={url}
       target="_blank"
       className="block"
@@ -20,9 +19,11 @@ export default function ProjectLink({ url, label }) {
       <div className="ml-[-20px] flex w-[calc(100%+40px)] cursor-pointer items-center justify-between rounded-xl py-[10px] px-[20px] transition hover:bg-orange hover:text-white">
         <div className="flex items-center">
           <span className={isUserHovering ? 'animate-spin-slow' : ''}>
-            <HexagonSvg />
+            <BoxSvg />
           </span>
-          <span className="ml-3 inline text-lg">{label}</span>
+          <span className="ml-3 inline text-lg ">
+            {label.short} <span> - {label.long}</span>
+          </span>
         </div>
       </div>
     </a>
