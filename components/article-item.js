@@ -9,7 +9,6 @@ export default function ArticleItem({ title, publishedAt, slug }) {
   return (
     <li>
       <Link href={url}>
-
         <div className="ml-[-20px] w-[calc(100%+40px)]">
           <div className="flex cursor-pointer items-center justify-between py-[10px] px-[20px] decoration-night decoration-2 underline-offset-2 hover:underline">
             <div className="flex items-center">
@@ -23,8 +22,7 @@ export default function ArticleItem({ title, publishedAt, slug }) {
             </span>
           </div>
         </div>
-
       </Link>
     </li>
-  );
+  )
 }
