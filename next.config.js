@@ -1,6 +1,6 @@
 module.exports = {
-	reactStrictMode: true,
-	images: {
-		domains: ['strapi.hmlinarevic.com'],
-	},
+  reactStrictMode: true,
+  images: {
+    domains: ['strapi.tatooine.services'],
+  },
 }

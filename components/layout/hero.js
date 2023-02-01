@@ -1,12 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
 import SaveSvg from '../icons/save-svg'
 import GithubSvg from '../icons/github-svg'
-
-import { DOMAIN } from '../../utils/url/assets'
+import { getAPIAssetEndpoint } from '../../utils/getAPIAssetEndpoint'
 
 export default function Hero({ imgUrl }) {
+
   return (
     <div className="flex justify-between">
       <div>
@@ -56,7 +55,7 @@ export default function Hero({ imgUrl }) {
       </div>
 
       <Image
-        src={DOMAIN + imgUrl}
+        src={getAPIAssetEndpoint(imgUrl)}
         alt="me outside in the park posterised in orange tones"
         width={300}
         height={320}

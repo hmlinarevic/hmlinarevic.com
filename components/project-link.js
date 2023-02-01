@@ -20,10 +20,13 @@ export default function ProjectLink({ url, label }) {
       <div className="ml-[-20px] flex w-[calc(100%+40px)] cursor-pointer items-center justify-between rounded-xl py-[10px] px-[20px] transition hover:bg-orange hover:text-white">
         <div className="flex items-center">
           <span className={isUserHovering ? 'animate-spin-slow' : ''}>
-            <BoxSvg />
+            <BoxSvg
+              className={`${isUserHovering ? 'text-white' : 'text-orange'}`}
+            />
           </span>
           <span className="ml-3 inline text-lg ">
-            {label.short} <span> - {label.long}</span>
+            {label.short}
+            <span> - {label.long}</span>
           </span>
         </div>
       </div>
