@@ -1,11 +1,11 @@
 import Image from 'next/legacy/image'
-
 import { getJuliesData } from '../lib/cms/julie'
-
-import { DOMAIN } from '../utils/url/assets'
+import { getAPIAssetEndpoint } from '../utils/getAPIAssetEndpoint'
 
 export default function Julie({ photos }) {
-  const juliesPhotos = photos.map((photo) => DOMAIN + photo.attributes.url)
+  const juliesPhotos = photos.map((photo) =>
+    getAPIAssetEndpoint(photo.attributes.url)
+  )
 
   return (
     <section>
