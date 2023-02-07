@@ -7,4 +7,13 @@ export default function Layout({ children }) {
       <main className="mx-auto max-w-[720px] py-20">{children}</main>
     </>
   )
+  return (
+    <>
+      <Header />
+
+      <main className="mx-auto min-w-[340px] max-w-[752px] py-10 sm:py-20 px-4">
+        {children}
+      </main>
+    </>
+  )
 }

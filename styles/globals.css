@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
   background-color: #eceff4;
+}
+
+body {
   color: #2e3440;
   font-family: 'Inter', sans-serif;
   padding: 0;
   margin: 0;
 
-  /* add scroll bar on every page */
-  overflow-y: scroll;
+  overflow-x: hidden;
 }

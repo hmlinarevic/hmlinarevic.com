@@ -1,12 +1,8 @@
-import { useState } from 'react'
-
 import ReactMarkdown from 'react-markdown'
-
 import Section from '../components/layout/section'
 import Hero from '../components/layout/hero'
 import ArticleItem from '../components/article-item'
 import ProjectLink from '../components/project-link'
-
 import { getMyData } from '../lib/cms/me'
 import { getSiteData } from '../lib/cms/site'
 import { getArticlesData } from '../lib/cms/articles'
