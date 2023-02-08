@@ -20,8 +20,10 @@ export default function Header() {
   useEffect(() => {
     if (isToggle) {
       document.body.style.overflow = 'hidden'
+      document.body.style.height = '100vh'
     } else {
       document.body.style.overflow = ''
+      document.body.style.height = 'auto'
     }
   }, [isToggle])
 
