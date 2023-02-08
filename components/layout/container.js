@@ -1,3 +1,9 @@
-export default function Container({ children }) {
-    return <div className="ctn-content h-full p-4 md:p-0">{children}</div>
+import clsx from 'clsx'
+
+export default function Container({ className, children }) {
+    return (
+        <div className={clsx('h-full mx-auto p-4 md:p-0', className)}>
+            {children}
+        </div>
+    )
 }
