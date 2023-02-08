@@ -12,10 +12,7 @@ export default function Hero({ imgUrl }) {
         Hey, I'm Hrvoje.
       </h1>
       {/* Image */}
-      <div
-        className="w-full h-[300px] border-2 relative sm:w-auto sm:h-auto sm:col-start-2 sm:col-end-[-1] sm:row-start-1
-                           sm:row-end-[-1]"
-      >
+      <div className="w-full h-[300px] border-2 relative sm:w-auto sm:h-auto sm:col-start-2 sm:col-end-[-1] sm:row-start-1 sm:row-end-[-1]">
         <Image
           src={getAPIAssetEndpoint(imgUrl)}
           alt="me outside in the park posterised in orange tones"
