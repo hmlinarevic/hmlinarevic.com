@@ -26,7 +26,7 @@ export default function Navigation() {
     return (
         <nav className="h-full flex items-center justify-between">
             <Link href="/">
-                <span className="block text-xl font-normal">
+                <span className="block text-xl text-white font-normal">
                     <span className="text-orange">hrvoje</span> mlinarevic
                 </span>
             </Link>
