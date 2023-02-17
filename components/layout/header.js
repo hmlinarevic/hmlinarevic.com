@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Container from './container'
-import ButtonBars from '../buttons/button-bars'
+import ButtonBars from '../button-bars.js'
 
 const navMenuOpenStyle = { height: '216px' }
 
