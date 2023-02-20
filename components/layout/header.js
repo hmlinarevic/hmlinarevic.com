@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import Container from './container'
 import ButtonBars from '../button-bars.js'
-
-const navMenuOpenStyle = { height: '216px' }
 
 export default function Header() {
   const [isToggle, setIsToggle] = useState(false)
@@ -16,6 +14,14 @@ export default function Header() {
     setIsToggle(false)
   }
 
+  const handleResize = useCallback(() => {
+    const bodyWidth = document.body.clientWidth
+
+    if (bodyWidth >= 640 && isToggle) {
+      setIsToggle(false)
+    }
+  }, [isToggle])
+
   useEffect(() => {
     if (isToggle) {
       document.body.style.overflow = 'hidden'
@@ -26,6 +32,14 @@ export default function Header() {
     }
   }, [isToggle])
 
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [handleResize])
+
   return (
     <header className="relative h-16 bg-black border-b border-dark">
       <Container className="min-w-[340px] max-w-[720px]">
@@ -35,33 +49,33 @@ export default function Header() {
               <span className="text-orange">hrvoje</span> mlinarevic
             </span>
           </Link>
-          <ButtonBars onToggle={handleToggle} />
+          <ButtonBars isToggle={isToggle} onToggle={handleToggle} />
           <ul
-            className={`bg-black sm:flex text-white absolute flex-col sm:flex-row top-16
-            right-0 h-0 overflow-hidden w-screen z-20 transition-all`}
-            style={isToggle ? navMenuOpenStyle : null}
+            className={`bg-black flex text-white absolute flex-col top-16 right-0 h-0 overflow-hidden
+            w-screen z-20 transition-all sm:static sm:w-auto sm:h-auto sm:flex-row`}
+            style={isToggle ? { height: '216px' } : null}
           >
             <li
-              className="mr-10 text-[1rem] underline mt-8 sm:mt-0 sm:ml-4 sm:no-underline"
+              className="ml-4 mt-8 text-[1rem] underline sm:mt-0 sm:mr-10 sm:no-underline"
               onClick={handleLink}
             >
-              <Link href="/me" className="cursor-pointer p-2">
+              <Link href="/me" className="sm:p-2">
                 about me
               </Link>
             </li>
             <li
-              className="mr-10 text-[1rem] underline mt-8 sm:mt-0 sm:ml-4 sm:no-underline"
+              className="ml-4 mt-8 text-[1rem] underline sm:mt-0 sm:mr-10 sm:no-underline"
               onClick={handleLink}
             >
-              <Link href="/blog" className="cursor-pointer p-2">
+              <Link href="/blog" className="sm:p-2">
                 articles
               </Link>
             </li>
             <li
-              className="text-[1rem] underline mt-8 sm:mt-0 sm:ml-4 sm:no-underline"
+              className="ml-4 mt-8 text-[1rem] underline sm:mt-0 sm:no-underline"
               onClick={handleLink}
             >
-              <Link href="/projects" className="cursor-pointer p-2">
+              <Link href="/projects" className="sm:p-2">
                 projects
               </Link>
             </li>
