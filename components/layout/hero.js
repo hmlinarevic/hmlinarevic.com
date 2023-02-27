@@ -25,7 +25,7 @@ export default function Hero({ imgUrl }) {
       </div>
       <div>
         {/* subheading */}
-        <p className="sm:w-[320px] text-lg md:text-xl font-normal leading-relaxed">
+        <p className="sm:w-[320px] text-lg md:text-xl font-normal md:leading-8">
           I like to <span className="font-bold text-orange">build</span>{' '}
           intuitive web apps and{' '}
           <span className="font-bold text-orange">design</span> algorithms. When
