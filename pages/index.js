@@ -23,10 +23,10 @@ export default function Home({ me, site, articles }) {
           url="https://www.crosswit.io"
           label={{ short: 'crosswit', long: 'word search & memory game' }}
         />
-        <ProjectLink
-          url="https://moviesnacks.netlify.app/"
-          label={{ short: 'moviesnacks', long: 'movie discovery app' }}
-        />
+        {/* <ProjectLink */}
+        {/*   url="https://moviesnacks.netlify.app/" */}
+        {/*   label={{ short: 'moviesnacks', long: 'movie discovery app' }} */}
+        {/* /> */}
       </Section>
 
       <Section title="Latest Articles">
