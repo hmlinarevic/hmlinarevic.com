@@ -1,6 +1,4 @@
-module.exports = {
-  reactStrictMode: true,
-  images: {
-    domains: ['strapi.tatooine.services'],
-  },
-}
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
+
+module.exports = nextConfig
