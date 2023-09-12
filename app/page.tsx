@@ -2,7 +2,7 @@
 
 export default function Home() {
     return (
-        <main className="mx-auto min-h-[1300px] w-[600px] pt-8 text-green-light">
+        <main className="mx-auto mb-20 p-4 text-green-light sm:w-[600px] sm:p-0 sm:pt-8">
             <h1 className="text-2xl">Hrvoje Mlinarevic</h1>
             <h2 className="mb-4 text-sm text-green-dark">
                 Web development, interactive apps
@@ -102,7 +102,7 @@ export default function Home() {
 
             <hr className="mb-4 mt-12 border-[1.25px] border-orange opacity-20" />
 
-            <section className="px-4 text-sm italic leading-relaxed text-orange">
+            <section className="text-sm italic leading-relaxed text-orange sm:px-4">
                 <p>“Data to Counselor Troi.”</p>
                 <p className="mt-0">“Yes, Data?”</p>
                 <p className="mt-0">
