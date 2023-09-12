@@ -2,22 +2,21 @@
 
 export default function Home() {
     return (
-        <main className="mx-auto h-full w-[600px] pt-8 text-green-light">
+        <main className="mx-auto min-h-[1300px] w-[600px] pt-8 text-green-light">
             <h1 className="text-2xl">Hrvoje Mlinarevic</h1>
-            <h2 className="text-sm text-green-dark mb-4">
+            <h2 className="mb-4 text-sm text-green-dark">
                 Web development, interactive apps
             </h2>
 
-            <hr className="mb-8 border-green-light opacity-20" />
+            <hr className="mb-8 border-[1.25px] border-green-light opacity-20" />
 
-            <p className="mt-6 text-white-softer">
-                As a self-taught web developer who fell in love in the craft of
-                creating modern applications I’m most fascinated by the
-                intricate ways of the web and the power of computers. My mission
-                is to create software that is easy to use while staying focused
-                on delivering intuitive user experience.
+            <p className="mt-6 text-white-softer text-opacity-75">
+                Inspired by the accessibility of information on the web and its
+                practicality, I believe that all web interfaces should be simple
+                enough and easy to navigate. My mission is to create software
+                that is focused on delivering intuitive user experience while
+                also offering value to its users.
             </p>
-
 
             {/* Projects */}
 
@@ -101,9 +100,9 @@ export default function Home() {
                 </li>
             </ul>
 
-            <hr className="mt-12 mb-4 border-orange opacity-20" />
+            <hr className="mb-4 mt-12 border-[1.25px] border-orange opacity-20" />
 
-            <section className="px-12 text-sm italic leading-loose text-orange mb-80">
+            <section className="px-4 text-sm italic leading-relaxed text-orange">
                 <p>“Data to Counselor Troi.”</p>
                 <p className="mt-0">“Yes, Data?”</p>
                 <p className="mt-0">
