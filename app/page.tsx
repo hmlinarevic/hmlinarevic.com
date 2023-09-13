@@ -11,11 +11,11 @@ export default function Home() {
             <hr className="mb-8 border-[1.25px] border-green-light opacity-20" />
 
             <p className="mt-6 text-white-softer text-opacity-75">
-                Inspired by the accessibility of information on the web and its
-                practicality, I believe that all web interfaces should be simple
-                enough and easy to navigate. My mission is to create software
-                that is focused on delivering intuitive user experience while
-                also offering value to its users.
+                Inspired by modern web applications and web infrastructure, I
+                believe that the systems with which we interact on a daily basis
+                should be practical, easy to use, and able to provide us with
+                some sort of value - either by making our lives easier or by
+                making us smarter.
             </p>
 
             {/* Projects */}
