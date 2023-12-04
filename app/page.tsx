@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -30,15 +31,18 @@ export default function Home() {
     return (
         <main
             ref={ref}
-            className="mx-auto text-neutral-300 sm:w-[600px] sm:py-6"
+            className="mx-auto sm:w-[600px] sm:py-6"
             style={hasScrollbar ? { marginBottom: "6rem" } : {}}
         >
             <h1 className="text-2xl">Hrvoje Mlinarevic</h1>
-            <h2 className="mb-4 text-sm text-neutral-500 font">
-                Web development, interactive apps
-            </h2>
+            <nav className="mb-4 flex items-center justify-between text-neutral-500">
+                <h2>Web development, interactive apps</h2>
+                {/* <Link href="/about" className="underline hover:text-neutral-200"> */}
+                {/*     About */}
+                {/* </Link> */}
+            </nav>
 
-            <hr className="mb-8 border-[1.25px] border-green-light opacity-20" />
+            <hr className="border-green-light mb-8 border-[1.25px] opacity-20" />
 
             <section className="text-sm italic leading-relaxed">
                 <p className="font-bold">“Data to Counselor Troi.”</p>
@@ -56,59 +60,14 @@ export default function Home() {
                 <p className="mt-0">“Data, I'll get back to you.”</p>
             </section>
 
-            {/* <hr className="mb-4 mt-12 border-[1.25px] border-orange opacity-20" /> */}
-
-            {/* <p className="mt-6 text-white-softer text-opacity-75"> */}
-            {/*     Inspired by modern web applications and web infrastructure, I */}
-            {/*     believe that the systems with which we interact on a daily basis */}
-            {/*     should be practical, easy to use, and able to provide us with */}
-            {/*     some sort of value - either by making our lives easier or by */}
-            {/*     making us smarter. */}
-            {/* </p> */}
             {/* Projects */}
 
-            <h3 className="mt-12 uppercase tracking-wide text-neutral-500">Projects</h3>
+            <h3 className="mt-12 text-xl text-neutral-500">Projects</h3>
             <ul className="list-disc">
-                <li className="ml-8 mt-2">
+                <li className="ml-7 mt-2">
                     <p className="text-white-softer">
                         <a
-                            className="text-violet-400 underline"
-                            href="https://crosswit.io"
-                            target="_blank"
-                        >
-                            Crosswit:
-                        </a>{" "}
-                        Blend between a memory game and a word search puzzle,
-                        the game design is based on memorization and recall
-                        (memory). We are first instructed to remember words and
-                        then find them in the puzzle. Those two aspects of the
-                        game could potentially improve short memory.
-                    </p>
-                </li>
-                {/* <li className="ml-8 mt-8"> */}
-                {/*     <p className="text-white-softer"> */}
-                {/*         <a */}
-                {/*             className="text-green-light underline" */}
-                {/*             href="https://moviesnacks.netlify.app/" */}
-                {/*             target="_blank" */}
-                {/*         > */}
-                {/*             Moviesnacks: */}
-                {/*         </a>{" "} */}
-                {/*         Movie app idea. Discover and search movies */}
-                {/*         Search for your favorite movie and add it to your list */}
-                {/*         of favorites. Discover latest moves and and enjoy */}
-                {/*         intuitv searching, discovering or adding movies to your */}
-                {/*         favorite list for easy access. */}
-                {/*     </p> */}
-                {/* </li> */}
-            </ul>
-
-            <h3 className="mt-12 uppercase tracking-wide text-neutral-500">Collaboration</h3>
-            <ul className="list-disc">
-                <li className="ml-8 mt-2">
-                    <p className="text-white-softer">
-                        <a
-                            className="text-violet-400 underline"
+                            className="text-violet-500 underline hover:text-violet-400"
                             href="https://aspirations.co/"
                             target="_blank"
                         >
@@ -121,25 +80,73 @@ export default function Home() {
                         of your vital time.{" "}
                     </p>
                 </li>
+                <li className="ml-7 mt-8">
+                    <p className="text-white-softer">
+                        <a
+                            href="https://crosswit.io"
+                            target="_blank"
+                            className="text-violet-500 underline hover:text-violet-400"
+                        >
+                            Crosswit:
+                        </a>{" "}
+                        Memory game and word search puzzles combined into an
+                        experience that helps you train short term memory. Game
+                        design is based on memorization and recall (memory) as
+                        we are first instructed to remember words and then find
+                        them in the puzzle.
+                    </p>
+                </li>
+                <li className="ml-7 mt-8">
+                    <p className="text-white-softer">
+                        <a
+                            href="https://moviesnacks.netlify.app"
+                            target="_blank"
+                            className="text-violet-500 underline hover:text-violet-400"
+                        >
+                            Moviesnacks:
+                        </a>{" "}
+                        Discover and search movies. App is utilizing{" "}
+                        <a
+                            href="https://www.themoviedb.org/"
+                            target="_blank"
+                            className="italic underline hover:text-neutral-400"
+                        >
+                            themoviedb.org
+                        </a>{" "}
+                        api service that provides all the information about
+                        movies. For smooth user experience and less network
+                        traffic all data that was fetched is stored in the
+                        browser's cache storage.
+                    </p>
+                </li>
+                <li className="ml-7 mt-8">
+                    <p className="text-white-softer">
+                        <a
+                            className="text-violet-500 underline hover:text-violet-400"
+                            href="https://sessiontimer.app"
+                            target="_blank"
+                        >
+                            Session Timer:
+                        </a>{" "}
+                        Introduce sessions to your flow and get notified by the
+                        browser when session is completed. I often find myself
+                        being most productive when I work with timers. You can
+                        tweak the timer duration to suit your needs better.
+                    </p>
+                </li>
             </ul>
-
-            {/* <hr className="my-12 border-green-light opacity-20" /> */}
-
-            {/* Collaboration */}
 
             {/* Contact */}
 
-            {/* <hr className="my-12 border-green-light opacity-20" /> */}
-
-            <h3 className="mt-12 uppercase tracking-wide text-neutral-500">Contact</h3>
-            <p className="mt-2 text-white-softer">
+            <h3 className="mt-12 text-xl text-neutral-500">Contact</h3>
+            <p className="text-white-softer mt-2">
                 If you wish to contact me you can use
                 “hrvoje.mlinarevic[at]gmail.com” to send me a message.
             </p>
             <ul className="list-disc">
-                <li className="ml-8 mt-2">
+                <li className="ml-7 mt-2">
                     <a
-                        className="underline text-violet-400"
+                        className="text-fuchsia-500 underline hover:text-fuchsia-400"
                         href="https://github.com/hmlinarevic"
                         target="_blank"
                     >
