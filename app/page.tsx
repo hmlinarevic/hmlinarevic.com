@@ -30,18 +30,18 @@ export default function Home() {
     return (
         <main
             ref={ref}
-            className="mx-auto text-green-light sm:w-[600px] sm:py-6"
+            className="mx-auto text-neutral-300 sm:w-[600px] sm:py-6"
             style={hasScrollbar ? { marginBottom: "6rem" } : {}}
         >
             <h1 className="text-2xl">Hrvoje Mlinarevic</h1>
-            <h2 className="mb-4 text-sm text-green-dark">
+            <h2 className="mb-4 text-sm text-neutral-500 font">
                 Web development, interactive apps
             </h2>
 
             <hr className="mb-8 border-[1.25px] border-green-light opacity-20" />
 
-            <section className="text-sm italic leading-relaxed text-orange">
-                <p>“Data to Counselor Troi.”</p>
+            <section className="text-sm italic leading-relaxed">
+                <p className="font-bold">“Data to Counselor Troi.”</p>
                 <p className="mt-0">“Yes, Data?”</p>
                 <p className="mt-0">
                     “I was wondering if now may be the appropriate time to
@@ -65,15 +65,14 @@ export default function Home() {
             {/*     some sort of value - either by making our lives easier or by */}
             {/*     making us smarter. */}
             {/* </p> */}
-
             {/* Projects */}
 
-            <h3 className="mt-12 text-xl">Projects</h3>
+            <h3 className="mt-12 uppercase tracking-wide text-neutral-500">Projects</h3>
             <ul className="list-disc">
                 <li className="ml-8 mt-2">
                     <p className="text-white-softer">
                         <a
-                            className="text-green-light underline"
+                            className="text-violet-400 underline"
                             href="https://crosswit.io"
                             target="_blank"
                         >
@@ -104,12 +103,12 @@ export default function Home() {
                 {/* </li> */}
             </ul>
 
-            <h3 className="mt-12 text-xl">Collaboration</h3>
+            <h3 className="mt-12 uppercase tracking-wide text-neutral-500">Collaboration</h3>
             <ul className="list-disc">
                 <li className="ml-8 mt-2">
                     <p className="text-white-softer">
                         <a
-                            className="text-green-light underline"
+                            className="text-violet-400 underline"
                             href="https://aspirations.co/"
                             target="_blank"
                         >
@@ -132,7 +131,7 @@ export default function Home() {
 
             {/* <hr className="my-12 border-green-light opacity-20" /> */}
 
-            <h3 className="mt-12 text-xl">Contact</h3>
+            <h3 className="mt-12 uppercase tracking-wide text-neutral-500">Contact</h3>
             <p className="mt-2 text-white-softer">
                 If you wish to contact me you can use
                 “hrvoje.mlinarevic[at]gmail.com” to send me a message.
@@ -140,7 +139,7 @@ export default function Home() {
             <ul className="list-disc">
                 <li className="ml-8 mt-2">
                     <a
-                        className="underline"
+                        className="underline text-violet-400"
                         href="https://github.com/hmlinarevic"
                         target="_blank"
                     >
