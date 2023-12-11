@@ -1,48 +1,18 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-
 /* eslint-disable react/no-unescaped-entities */
 
 export default function Home() {
-    const ref = useRef<HTMLElement>(null);
-    const [hasScrollbar, setHasScrollbar] = useState(false);
-
-    useEffect(() => {
-        const element = ref.current;
-        console.log({ element });
-        console.log({ document: window.document });
-
-        console.log("window inner height:", window.innerHeight);
-
-        console.log({
-            scrollHeight: element?.scrollHeight,
-            clientHeight: element?.clientHeight,
-        });
-
-        if (element) {
-            if (window.innerHeight < element?.clientHeight) {
-                setHasScrollbar(true);
-            }
-        }
-    }, []);
-
     return (
-        <main
-            ref={ref}
-            className="mx-auto sm:w-[600px] sm:py-6"
-            style={hasScrollbar ? { marginBottom: "6rem" } : {}}
-        >
+        <main className="mx-auto sm:w-[600px] sm:py-6">
             <h1 className="text-2xl">Hrvoje Mlinarevic</h1>
             <nav className="mb-4 flex items-center justify-between text-neutral-500">
                 <h2>Web development, interactive apps</h2>
-                {/* <Link href="/about" className="underline hover:text-neutral-200"> */}
-                {/*     About */}
-                {/* </Link> */}
             </nav>
 
-            <hr className="border-green-light mb-8 border-[1.25px] opacity-20" />
+            <hr className="border-green-light mb-6 border-[1.25px] opacity-20" />
+
+            {/* Star Trek - Data to Counselor Troi */}
 
             <section className="text-sm italic leading-relaxed">
                 <p className="font-bold">“Data to Counselor Troi.”</p>
@@ -60,11 +30,15 @@ export default function Home() {
                 <p className="mt-0">“Data, I'll get back to you.”</p>
             </section>
 
+            <hr className="border-green-light mt-6 border-[1.25px] opacity-20" />
+
             {/* Projects */}
 
-            <h3 className="mt-12 text-xl text-neutral-500">Projects</h3>
+            <h3 className="mt-6 text-xl font-bold text-neutral-500">
+                Projects
+            </h3>
             <ul className="list-disc">
-                <li className="ml-7 mt-2">
+                <li className="ml-6 mt-3">
                     <p className="text-white-softer">
                         <a
                             className="text-violet-500 underline hover:text-violet-400"
@@ -80,7 +54,7 @@ export default function Home() {
                         of your vital time.{" "}
                     </p>
                 </li>
-                <li className="ml-7 mt-8">
+                <li className="ml-6 mt-8">
                     <p className="text-white-softer">
                         <a
                             href="https://crosswit.io"
@@ -96,7 +70,7 @@ export default function Home() {
                         them in the puzzle.
                     </p>
                 </li>
-                <li className="ml-7 mt-8">
+                <li className="ml-6 mt-8">
                     <p className="text-white-softer">
                         <a
                             href="https://moviesnacks.netlify.app"
@@ -119,7 +93,7 @@ export default function Home() {
                         browser's cache storage.
                     </p>
                 </li>
-                <li className="ml-7 mt-8">
+                <li className="ml-6 mt-8">
                     <p className="text-white-softer">
                         <a
                             className="text-violet-500 underline hover:text-violet-400"
@@ -129,22 +103,24 @@ export default function Home() {
                             Session Timer:
                         </a>{" "}
                         Introduce sessions to your flow and get notified by the
-                        browser when session is completed. I often find myself
-                        being most productive when I work with timers. You can
-                        tweak the timer duration to suit your needs better.
+                        browser when session is completed. I often find to be
+                        most productive when I work with timers. You can tweak
+                        the timer duration to suit your needs better.
                     </p>
                 </li>
             </ul>
 
+            <hr className="border-green-light mt-6 border-[1.25px] opacity-20" />
+
             {/* Contact */}
 
-            <h3 className="mt-12 text-xl text-neutral-500">Contact</h3>
+            <h3 className="mt-6 text-xl font-bold text-neutral-500">Contact</h3>
             <p className="text-white-softer mt-2">
                 If you wish to contact me you can use
                 “hrvoje.mlinarevic[at]gmail.com” to send me a message.
             </p>
             <ul className="list-disc">
-                <li className="ml-7 mt-2">
+                <li className="ml-6 mt-3">
                     <a
                         className="text-fuchsia-500 underline hover:text-fuchsia-400"
                         href="https://github.com/hmlinarevic"
