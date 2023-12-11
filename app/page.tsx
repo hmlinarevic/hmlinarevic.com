@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <main className="mx-auto sm:w-[600px] sm:py-6">
             <h1 className="text-2xl">Hrvoje Mlinarevic</h1>
-            <nav className="mb-4 flex items-center justify-between text-neutral-500">
+            <nav className="mb-2 flex items-center justify-between text-sm text-neutral-500">
                 <h2>Web development, interactive apps</h2>
             </nav>
 
@@ -61,8 +61,8 @@ export default function Home() {
                         >
                             Crosswit:
                         </a>{" "}
-                        Memory game and word search puzzles combined into an
-                        experience that helps you train short term memory. Game
+                        Memory game and word search puzzles combined into a
+                        single game that aims to improve short term memory. Game
                         design is based on memorization and recall (memory) as
                         we are first instructed to remember words and then find
                         them in the puzzle.
@@ -85,10 +85,9 @@ export default function Home() {
                         >
                             themoviedb.org
                         </a>{" "}
-                        api service that provides all the information about
-                        movies. For smooth user experience and less network
-                        traffic all data that was fetched is stored in the
-                        browser's cache storage.
+                        api service that provides movies data. For smooth user
+                        experience and less network traffic all fetched data is
+                        stored in the browser's cache storage.
                     </p>
                 </li>
                 <li className="ml-6 mt-8">
@@ -101,7 +100,7 @@ export default function Home() {
                             Session Timer:
                         </a>{" "}
                         Introduce sessions to your flow and get notified by the
-                        browser when session is completed. I often find to be
+                        browser when a session is completed. I often find to be
                         most productive when I work with timers. You can tweak
                         the timer duration to suit your needs better.
                     </p>
