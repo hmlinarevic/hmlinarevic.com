@@ -4,7 +4,7 @@
 
 export default function Home() {
     return (
-        <main className="mx-auto sm:w-[600px] sm:py-6">
+        <main className="mx-auto sm:w-[600px] sm:py-6 mb-20">
             <h1 className="text-2xl">Hrvoje Mlinarevic</h1>
             <nav className="mb-2 flex items-center justify-between text-sm text-neutral-500">
                 <h2>Web development, interactive apps</h2>
