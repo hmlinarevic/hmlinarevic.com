@@ -30,11 +30,9 @@ export default function Home() {
                 <p className="mt-0">“Data, I'll get back to you.”</p>
             </section>
 
-            <hr className="border-green-light mt-6 border-[1.25px] opacity-20" />
-
             {/* Projects */}
 
-            <h3 className="mt-6 text-xl font-bold text-neutral-500">
+            <h3 className="mt-12 text-xl font-bold text-neutral-500">
                 Projects
             </h3>
             <ul className="list-disc">
@@ -110,11 +108,11 @@ export default function Home() {
                 </li>
             </ul>
 
-            <hr className="border-green-light mt-6 border-[1.25px] opacity-20" />
-
             {/* Contact */}
 
-            <h3 className="mt-6 text-xl font-bold text-neutral-500">Contact</h3>
+            <h3 className="mt-12 text-xl font-bold text-neutral-500">
+                Contact
+            </h3>
             <p className="text-white-softer mt-2">
                 If you wish to contact me you can use
                 “hrvoje.mlinarevic[at]gmail.com” to send me a message.
